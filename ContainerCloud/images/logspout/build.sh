@@ -20,9 +20,7 @@ wget -O /tmp/v${LOGSPOUT_VERSION}.tar.gz \
     /go/src/github.com/gliderlabs/logspout
 
 cd /go/src/github.com/gliderlabs/logspout
-which go
-find ./ -name "Docker*"|xargs grep docker
-go get -x
+go get -fix -x
 go build -v -ldflags "-X main.Version dev" -o /bin/logspout
 
 apk del .build-deps
