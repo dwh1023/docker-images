@@ -2,6 +2,8 @@
 set -e
 
 export GOPATH=/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 export LOGSPOUT_VERSION=3.1
 export LOGSPOUT_URL=https://github.com/gliderlabs/logspout/archive
 
