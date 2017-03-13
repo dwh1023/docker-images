@@ -20,7 +20,6 @@ wget -O /tmp/v${LOGSPOUT_VERSION}.tar.gz \
     /go/src/github.com/gliderlabs/logspout
 
 cd /go/src/github.com/gliderlabs/logspout
-go get context
 go get -x || find ${GOPATH} && go env && find ${GOROOT}
 go build -v -x -ldflags "-X main.Version dev" -o /bin/logspout
 
