@@ -20,8 +20,7 @@ wget -O /tmp/v${LOGSPOUT_VERSION}.tar.gz \
     /go/src/github.com/gliderlabs/logspout
 
 cd /go/src/github.com/gliderlabs/logspout
-go get -v golang.org/x/net/context
-go get -u -x
+go get -x || find ./ 
 go build -v -ldflags "-X main.Version dev" -o /bin/logspout
 
 apk del .build-deps
