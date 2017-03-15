@@ -23,7 +23,7 @@ cd /go/src/github.com/gliderlabs/logspout
 go get -x || find ${GOPATH} && go env && find ${GOROOT}
 #go build -v -x -ldflags "-X main.Version dev" -o /bin/logspout
 
-apk del .build-deps
-rm -rf /go
-rm -rf /var/cache/apk/*
-rm /tmp/v${LOGSPOUT_VERSION}.tar.gz
+#apk del .build-deps
+#rm -rf /go
+#rm -rf /var/cache/apk/*
+#rm /tmp/v${LOGSPOUT_VERSION}.tar.gz
