@@ -21,7 +21,7 @@ wget -O /tmp/v${LOGSPOUT_VERSION}.tar.gz \
 
 cd /go/src/github.com/gliderlabs/logspout
 go get -x # || find ${GOPATH} && go env && find ${GOROOT}
-sed 's/\/context/golang.org\/x\/net\/context/' /go/src/github.com/fsouza/go-dockerclient/client_unix.go > /go/src/github.com/fsouza/go-dockerclient/client_unix.go.tmp
+sed 's/\/context/github\.com\/gorilla\/context/' /go/src/github.com/fsouza/go-dockerclient/client_unix.go > /go/src/github.com/fsouza/go-dockerclient/client_unix.go.tmp
 mv /go/src/github.com/fsouza/go-dockerclient/client_unix.go.tmp /go/src/github.com/fsouza/go-dockerclient/client_unix.go
 cat /go/src/github.com/fsouza/go-dockerclient/client_unix.go
 go build -v -x -ldflags "-X main.Version dev" -o /bin/logspout
