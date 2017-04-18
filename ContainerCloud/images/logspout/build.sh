@@ -8,7 +8,7 @@ export LOGSPOUT_URL=https://github.com/gliderlabs/logspout/archive
 apk upgrade
 apk update
 apk add curl jq
-apk add --virtual .build-deps wget go git svn build-base
+apk add --virtual .build-deps wget go git subversion build-base
 
 mkdir -p /go/src/github.com/gliderlabs
 
